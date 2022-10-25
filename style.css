@@ -1,6 +1,7 @@
 body {
     width: 1020px;
     font-family: "PT Sans Narrow"; /* установить шрифт */
+    font-size: 40px;
 }
 
 li {
