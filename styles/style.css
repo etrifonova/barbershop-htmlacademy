@@ -1,28 +1,18 @@
-body {
-    width: 1020px;
-    font-family: "PT Sans Narrow"; /* установить шрифт */
-    font-size: 40px;
-}
-
-li {
-    list-style-type: none; /* Убираем маркеры */
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
 }
 
 
 
-.main-index {
-    background-image: url("img/bg-image.jpg");
-    color: white;
-}
+
+
 
 
 /* КАТАЛОГ */
 
-.navigation-logo {
-    background-color: black;
-    margin: 10px;
-    padding: 10px;
-}
+
 
 /* from eCSSTractor
 .page-header {
