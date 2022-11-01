@@ -1,0 +1,161 @@
+body {
+    width: 1020px;
+    font-family: "PT Sans Narrow"; /* установить шрифт */
+    font-size: 40px;
+}
+
+li {
+    list-style-type: none; /* Убираем маркеры */
+}
+
+
+
+.main-index {
+    background-image: url("img/bg-image.jpg");
+    color: white;
+}
+
+
+/* КАТАЛОГ */
+
+.navigation-logo {
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* from eCSSTractor
+.page-header {
+}
+.navigation {
+}
+.nav-list {
+}
+.nav-item {
+}
+.nav-link {
+}
+.nav-user {
+}
+.visually-hidden {
+}
+.main-index {
+}
+.logo {
+}
+.advantages {
+}
+.advantages-list {
+}
+.advantages-item {
+}
+.advantages-title {
+}
+.advantages-description {
+}
+.services {
+}
+.services-list {
+}
+.services-item {
+}
+.services-name {
+}
+.services-prices {
+}
+.button {
+}
+.button-all {
+}
+.gallery {
+}
+.gallery-title {
+}
+.slider-image {
+}
+.slider-button {
+}
+.slider-prev {
+}
+.slider-next {
+}
+.slider-pagination {
+}
+.slider-pagination-item {
+}
+.slider-pagination-button {
+}
+.slider-pagination-button-current {
+}
+.contacts {
+}
+.contacts-title {
+}
+.contacts-subtitle {
+}
+.contacts-address-text {
+}
+.contacts-phone {
+}
+.contacts-schedule {
+}
+.contacts-schedule-item {
+}
+.button-feedback {
+}
+.appointment {
+}
+.appointment-title {
+}
+.appointment-form {
+}
+.appointment-form-date {
+}
+.form-label {
+}
+.form-label-icon {
+}
+.info {
+}
+.appointment-form-time {
+}
+.appointment-form-phone {
+}
+.appointment-form-name {
+}
+.page-footer {
+}
+.footer-contacts {
+}
+.footer-logo {
+}
+.footer-address {
+}
+.footer-address-text {
+}
+.footer-phone {
+}
+.footer-contacts-map-link {
+}
+.newsletter {
+}
+.page-footer-title {
+}
+.newsletter-form {
+}
+.newsletter-email {
+}
+.field {
+}
+.newsletter-button {
+}
+.footer-social {
+}
+.footer-social-list {
+}
+.footer-social-item {
+}
+.about-text {
+}
+.htmlacademy-link {
+}
