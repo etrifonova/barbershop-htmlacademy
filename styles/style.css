@@ -42,11 +42,28 @@
 }
 
 body {
-    font-family: "PT Sans";
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242424;
+    background-color: #FBF7F4;
 }
 
+.page-header {
+    color: #FFFFFF;
+    background: #000000;
+}
 
-
+.nav-link {
+    font-family: "PT Sans Narrow", sans-serif;
+    line-height: 22px;
+    color: #FFFFFF;
+    text-align: center;
+    background: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
 
 /* КАТАЛОГ */
@@ -54,15 +71,12 @@ body {
 
 
 /* from eCSSTractor
-.page-header {
-}
+
 .navigation {
 }
 .nav-list {
 }
 .nav-item {
-}
-.nav-link {
 }
 .nav-user {
 }
