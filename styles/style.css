@@ -66,6 +66,35 @@ body {
 }
 
 
+.main-index {
+    color: #FFFFFF;
+    background: #000000;
+    background-image: url("/img/bg-image.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+/* ПРЕИМУЩЕСТВА */
+.advantages-list {
+    text-align: center;
+}
+
+.advantages-title {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+/* Index columns */
+
+.index-columns {
+    color: #242424;
+    background-color: #FBF7F4;
+    background-image: url("/");
+}
+/* Получившейся обёртке зададим фоновое изображение, фоновый цвет и цвет текста. - ГДЕ ТАМ ФОНОВОЕ ИЗОБРАЖЕНИЕ????!!!! */
+
 /* КАТАЛОГ */
 
 
@@ -82,17 +111,11 @@ body {
 }
 .visually-hidden {
 }
-.main-index {
-}
 .logo {
 }
 .advantages {
 }
-.advantages-list {
-}
 .advantages-item {
-}
-.advantages-title {
 }
 .advantages-description {
 }
