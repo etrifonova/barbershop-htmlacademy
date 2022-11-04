@@ -49,6 +49,12 @@ body {
     background-color: #FBF7F4;
 }
 
+
+.button {
+    font-family: inherit;
+    
+}
+
 .page-header {
     color: #FFFFFF;
     background: #000000;
@@ -86,6 +92,20 @@ body {
     text-transform: uppercase;
 }
 
+.services {
+    text-transform: uppercase;
+}
+
+.services-list {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+.services-item {
+    color: #AF7842;
+}
+
+
 /* Index columns */
 
 .index-columns {
@@ -119,17 +139,9 @@ body {
 }
 .advantages-description {
 }
-.services {
-}
-.services-list {
-}
-.services-item {
-}
 .services-name {
 }
 .services-prices {
-}
-.button {
 }
 .button-all {
 }
