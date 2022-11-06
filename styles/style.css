@@ -52,8 +52,17 @@ body {
 
 .button {
     font-family: inherit;
-    
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
 }
+
+
 
 .page-header {
     color: #FFFFFF;
@@ -92,19 +101,6 @@ body {
     text-transform: uppercase;
 }
 
-.services {
-    text-transform: uppercase;
-}
-
-.services-list {
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 700;
-}
-.services-item {
-    color: #AF7842;
-}
-
 
 /* Index columns */
 
@@ -113,6 +109,50 @@ body {
     background-color: #FBF7F4;
     background-image: url("/");
 }
+
+.services {
+    text-transform: uppercase;
+}
+
+.services-title {
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+.services-list {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+.services-prices {
+    color: #AF7842;
+}
+
+.gallery-title {
+    line-height: 35px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.contacts {
+    font-weight: 700;
+}
+
+.contacts-title {
+    line-height: 35px;
+    font-size: 32px;
+}
+
+.contacts-subtitle {
+}
+.contacts-address-text {
+}
+.contacts-phone {
+}
+
 /* Получившейся обёртке зададим фоновое изображение, фоновый цвет и цвет текста. - ГДЕ ТАМ ФОНОВОЕ ИЗОБРАЖЕНИЕ????!!!! */
 
 /* КАТАЛОГ */
@@ -139,16 +179,18 @@ body {
 }
 .advantages-description {
 }
+
+.services-item {
+}
 .services-name {
 }
-.services-prices {
-}
+
+
 .button-all {
 }
 .gallery {
 }
-.gallery-title {
-}
+
 .slider-image {
 }
 .slider-button {
@@ -164,16 +206,6 @@ body {
 .slider-pagination-button {
 }
 .slider-pagination-button-current {
-}
-.contacts {
-}
-.contacts-title {
-}
-.contacts-subtitle {
-}
-.contacts-address-text {
-}
-.contacts-phone {
 }
 .contacts-schedule {
 }
