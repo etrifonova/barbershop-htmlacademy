@@ -72,7 +72,7 @@ body {
 .nav-link {
     font-family: "PT Sans Narrow", sans-serif;
     line-height: 22px;
-    color: #FFFFFF;
+    color: #FFFFFF; /* color: inherit также можно*/
     text-align: center;
     background: #000000;
     font-weight: 700;
@@ -85,7 +85,7 @@ body {
     color: #FFFFFF;
     background: #000000;
     background-image: url("/img/bg-image.jpg");
-    background-size: auto;
+    background-size: 100% auto;
     background-repeat: no-repeat;
 }
 
@@ -107,7 +107,7 @@ body {
 .index-columns {
     color: #242424;
     background-color: #FBF7F4;
-    background-image: url("/");
+    background-image: url("/img/bg-noisy.png");
 }
 
 .services {
@@ -144,14 +144,107 @@ body {
 .contacts-title {
     line-height: 35px;
     font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.contacts-subtitle {
-}
 .contacts-address-text {
+    font-style: normal;
 }
+.contacts-subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #AF7842;
+}
+
 .contacts-phone {
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #242424;
 }
+
+
+.appointment-title {
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.appointment-form {
+    color: #595959;
+}
+
+.form-label {
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.page-footer {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #242424;
+    background-image: url("/img/bg-noisy.png"); 
+    background-repeat: repeat;
+}
+
+.page-footer a {
+    color: #FFFFFF;
+}
+
+
+.page-footer .htmlacademy-link {
+    font-size: 14px;
+    color: #DBB590;
+}
+
+
+.page-footer-title {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.footer-address {
+    font-style: normal;
+}
+
+.footer-address p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+
+.footer-phone {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.footer-contacts-map-link {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
 
 /* Получившейся обёртке зададим фоновое изображение, фоновый цвет и цвет текста. - ГДЕ ТАМ ФОНОВОЕ ИЗОБРАЖЕНИЕ????!!!! */
 
@@ -215,13 +308,7 @@ body {
 }
 .appointment {
 }
-.appointment-title {
-}
-.appointment-form {
-}
 .appointment-form-date {
-}
-.form-label {
 }
 .form-label-icon {
 }
@@ -233,23 +320,13 @@ body {
 }
 .appointment-form-name {
 }
-.page-footer {
-}
 .footer-contacts {
 }
 .footer-logo {
 }
-.footer-address {
-}
 .footer-address-text {
 }
-.footer-phone {
-}
-.footer-contacts-map-link {
-}
 .newsletter {
-}
-.page-footer-title {
 }
 .newsletter-form {
 }
@@ -266,6 +343,4 @@ body {
 .footer-social-item {
 }
 .about-text {
-}
-.htmlacademy-link {
 }
