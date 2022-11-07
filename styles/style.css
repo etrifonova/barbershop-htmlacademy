@@ -246,87 +246,123 @@ body {
 }
 
 
-/* Получившейся обёртке зададим фоновое изображение, фоновый цвет и цвет текста. - ГДЕ ТАМ ФОНОВОЕ ИЗОБРАЖЕНИЕ????!!!! */
-
 /* КАТАЛОГ */
+
+
 
 
 
 /* from eCSSTractor
 
+.page-header {
+}
 .navigation {
+}
+.navigation-logo {
+}
+.page-header-logo {
 }
 .nav-list {
 }
 .nav-item {
 }
+.nav-link {
+}
 .nav-user {
 }
 .visually-hidden {
 }
-.logo {
+.main-inner {
 }
-.advantages {
+.breadcrumbs {
 }
-.advantages-item {
+.breadcrumbs-item {
 }
-.advantages-description {
+.breadcrumbs-link {
 }
-
-.services-item {
+.catalog-products {
 }
-.services-name {
+.catalog-filter {
 }
-
-
-.button-all {
+.catalog-filter-group {
 }
-.gallery {
+.catalog-filter-title {
 }
-
-.slider-image {
+.range-toggle {
 }
-.slider-button {
+.toggle-min {
 }
-.slider-prev {
+.toggle-max {
 }
-.slider-next {
+.catalog-filter-label {
 }
-.slider-pagination {
+.catalog-filter-input {
 }
-.slider-pagination-item {
+.catalog-filter-list {
 }
-.slider-pagination-button {
+.catalog-filter-item {
 }
-.slider-pagination-button-current {
+.control {
 }
-.contacts-schedule {
+.control-input {
 }
-.contacts-schedule-item {
+.control-label {
 }
-.button-feedback {
+.control-mark {
 }
-.appointment {
+.button {
 }
-.appointment-form-date {
+.sorting-type {
 }
-.form-label-icon {
+.select-control {
 }
-.info {
+.button-light {
 }
-.appointment-form-time {
+.product-list {
 }
-.appointment-form-phone {
+.product-card {
 }
-.appointment-form-name {
+.product-card-link {
+}
+.product-card-image {
+}
+.product-card-title {
+}
+.product-card-price {
+}
+.product-card-button {
+}
+.pagination {
+}
+.pagination-item {
+}
+.pagination-link {
+}
+.pagination-prev {
+}
+.pagination-disabled {
+}
+.pagination-current {
+}
+.pagination-next {
+}
+.page-footer {
 }
 .footer-contacts {
 }
 .footer-logo {
 }
+.footer-address {
+}
 .footer-address-text {
 }
+.footer-phone {
+}
+.footer-contacts-map-link {
+}
 .newsletter {
+}
+.page-footer-title {
 }
 .newsletter-form {
 }
@@ -344,3 +380,6 @@ body {
 }
 .about-text {
 }
+.htmlacademy-link {
+}
+
