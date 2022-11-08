@@ -249,36 +249,99 @@ body {
 /* КАТАЛОГ */
 
 
+.main-inner {
+    color: #242424;
+    background-color: #FBF7F4;
+    background-image: url("/img/bg-noisy.png");
+}
+
+.inner-header-title {
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+.breadcrumbs {
+    color: #242424;
+}
+
+.breadcrumbs-link {
+    color: inherit;
+}
+
+.catalog-filter-title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: #242424;
+    text-transform: uppercase;
+}
 
 
+.catalog-filter-label {
+    font-weight: 700;
+}
+
+.sorting-container {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+
+.button-light {
+    color: #242424;
+    background-color: #FFFFFF;
+}
+
+
+.product-card {
+    background-color: #FFFFFF;
+}
+
+.product-card-link {
+    text-decoration: none;
+}
+
+.product-card-title {
+    font-weight: 700;
+    color: #242424;
+}
+
+.product-card-price {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #814B18;
+    text-transform: uppercase;
+}
+
+.pagination {
+    background-color: #FFFFFF;
+}
+
+.pagination-link {
+    color: #FFFFFF;
+    background-color: #000000;
+    text-decoration: none;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.pagination-current {
+    color: #242424;
+    background-color: #FFFFFF;
+}
+
+.pagination-disabled {
+    background-color: #595959;
+}
 
 /* from eCSSTractor
 
-.page-header {
-}
-.navigation {
-}
-.navigation-logo {
-}
-.page-header-logo {
-}
-.nav-list {
-}
-.nav-item {
-}
-.nav-link {
-}
-.nav-user {
-}
+
 .visually-hidden {
 }
-.main-inner {
-}
-.breadcrumbs {
-}
 .breadcrumbs-item {
-}
-.breadcrumbs-link {
 }
 .catalog-products {
 }
@@ -286,15 +349,11 @@ body {
 }
 .catalog-filter-group {
 }
-.catalog-filter-title {
-}
 .range-toggle {
 }
 .toggle-min {
 }
 .toggle-max {
-}
-.catalog-filter-label {
 }
 .catalog-filter-input {
 }
@@ -316,33 +375,15 @@ body {
 }
 .select-control {
 }
-.button-light {
-}
 .product-list {
-}
-.product-card {
-}
-.product-card-link {
 }
 .product-card-image {
 }
-.product-card-title {
-}
-.product-card-price {
-}
 .product-card-button {
-}
-.pagination {
 }
 .pagination-item {
 }
-.pagination-link {
-}
 .pagination-prev {
-}
-.pagination-disabled {
-}
-.pagination-current {
 }
 .pagination-next {
 }
