@@ -78,6 +78,23 @@ body {
     background: #000000;
 }
 
+.navigation {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.nav-list {
+    width: 430px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-user {
+    max-width: 250px;
+    margin-left: auto;
+}
+
 .nav-link {
     font-family: "PT Sans Narrow", sans-serif;
     line-height: 22px;
@@ -102,9 +119,27 @@ body {
     background-repeat: no-repeat;
 }
 
+.page-container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+}
+
 /* ПРЕИМУЩЕСТВА */
 .advantages-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
+}
+
+.advantages-item {
+    width: 277px;
 }
 
 .advantages-title {
@@ -118,12 +153,16 @@ body {
 /* Index columns */
 
 .index-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
     color: #242424;
     background-color: #FBF7F4;
     background-image: url("/img/bg-noisy.png");
 }
 
 .services {
+    width: 390px;
     text-transform: uppercase;
 }
 
@@ -142,6 +181,10 @@ body {
     color: #AF7842;
 }
 
+.gallery {
+    width: 390px;
+}
+
 .gallery-title {
     line-height: 35px;
     font-size: 32px;
@@ -151,6 +194,7 @@ body {
 
 
 .contacts {
+    width: 350px;
     font-weight: 700;
 }
 
@@ -235,6 +279,12 @@ body {
     text-transform: uppercase;
 }
 
+.page-footer-container {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+}
+
 .footer-address {
     font-style: normal;
 }
@@ -256,6 +306,11 @@ body {
     text-transform: uppercase;
 }
 
+.footer-contacts {
+    width: 200px;
+    margin-right: 130px;
+}
+
 .footer-contacts-map-link {
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
@@ -264,6 +319,12 @@ body {
     color: #FFFFFF;
     text-decoration: underline;
     text-transform: uppercase;
+}
+
+.footer-social {
+    margin-left: auto;
+    max-width: 190px;
+
 }
 
 
