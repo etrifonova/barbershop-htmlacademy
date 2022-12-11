@@ -52,6 +52,7 @@
         </header>
 
         <main class="main-inner">
+            <div class="page-container">
             <header class="inner-header">
                 <h1 class="inner-header-title">Каталог</h1>
                 <ul class="breadcrumbs">
@@ -66,7 +67,7 @@
 
 
             <section class="catalog-products">
-                <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+                <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
                 <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                     <fieldset class="catalog-filter-group"> <!-- В формах для группировки нескольких элементов используется тег <fieldset>, а для заголовка такой группы используется тег <legend>-->
                         <legend class="catalog-filter-title">Цена</legend>
@@ -156,7 +157,8 @@
                     <button class="button" type="submit">Показать</button>
                 </form>
 
-                <div class="sorting-container">
+                <div class="catalog-right-column">
+                    <div class="sorting-container">
                     <form class="sorting-type">
                         <label class="visually-hidden" for="sorting">Сортировка</label>
                         <select class="select-control" name="sorting" id="sorting">
@@ -255,13 +257,13 @@
                             <span class="visually-hidden">Следующая страница</span>
                         </a>
                     </li>
-
                 </ul>
-
+            </div>
             </section>
-
-        </main>
+        </div>
+    </main>
         <footer class="page-footer">
+            <div class="page-footer-container">
             <section class="footer-contacts">
                 <h2 class="visually-hidden">Контакты</h2>
                 <img class="footer-logo" src="/img/logo-short-dark.svg" alt="логотип Барбершопа" width="183" height="21">
@@ -306,6 +308,7 @@
                 </ul>
                 <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p> 
             </section>
+        </div>
         </footer>
 
     </body>
