@@ -58,6 +58,17 @@ body {
     background-color: #FBF7F4;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    /* MDN про clip: Deprecated: This feature is no longer recommended.  https://developer.mozilla.org/en-US/docs/Web/CSS/clip*/
+    overflow: hidden;
+}
 
 .button {
     font-family: inherit;
@@ -69,6 +80,7 @@ body {
     background-color: #000000;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 0;
 }
 
 
@@ -85,17 +97,36 @@ body {
 }
 
 .nav-list {
-    width: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 470px;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
+
+/* Задача: сделать так, чтобы элементы шли друг за другом, и учесть переполнение элементами.
+
+Здесь мы учитываем переполнение пунктами меню, так как их может стать больше. Заказчик может захотеть добавить новую страницу, и нам нужно это учесть.
+
+Чтобы элементы шли друг за другом, достаточно указать display: flex и создать ось, где будут располагаться блоки.
+*/
 
 .nav-user {
     max-width: 250px;
     margin-left: auto;
 }
 
+.nav-user .nav-link {
+    min-width: 16px;
+    min-height: 22px;
+    /* Для увеличения области клика пользовательских ссылки в навигации увеличим их размер по размеру иконок, так вне зависимости от наполнения ссылок: иконки или текст, размер всегда будет по макету. */
+
+}
+
 .nav-link {
+    display: block; 
+    /* поменяли display, чтобы сработали отступы по вертикали  */
     font-family: "PT Sans Narrow", sans-serif;
     line-height: 22px;
     color: #FFFFFF; /* color: inherit также можно*/
@@ -104,6 +135,7 @@ body {
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 24px 19px;
 }
 
 .navigation-logo {
@@ -113,6 +145,9 @@ body {
 
 .main-container {
     flex-grow: 1;
+    padding-top: 64px; 
+    padding-bottom: 60px;
+
 }
 
 
@@ -132,6 +167,8 @@ body {
 .logo {
     display: block;
     margin: 0 auto;
+    margin-bottom: 64px;
+
 }
 
 /* ПРЕИМУЩЕСТВА */
@@ -141,6 +178,8 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    margin-bottom: 58px;
+    list-style-type: none;
 }
 
 .advantages-item {
@@ -154,6 +193,9 @@ body {
     text-transform: uppercase;
 }
 
+.advantages-description {
+    margin: 0;
+}
 
 /* Index columns */
 
@@ -164,6 +206,12 @@ body {
     color: #242424;
     background-color: #FBF7F4;
     background-image: url("/img/bg-noisy.png");
+    margin-bottom: 32px;
+    padding: 40px;
+}
+
+.index-columns:last-child {
+  margin-bottom: 0;
 }
 
 .services {
@@ -190,9 +238,13 @@ body {
     width: 390px;
 }
 
+/* Title */
+
 .gallery-title {
-    line-height: 35px;
+    margin-top: 0;
+    margin-bottom: 28px;   
     font-size: 32px;
+    line-height: 35px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -236,17 +288,17 @@ body {
 
 
 .appointment-title {
+    margin-top: 0;
+    margin-bottom: 28px; 
     font-size: 32px;
     line-height: 35px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.appointment-form {
+.appointment-info {
     color: #595959;
-    display: grid;
-    grid-template-columns: 114px 74px 208px;
-}
+  }
 
 .form-label {
     line-height: 24px;
@@ -276,6 +328,8 @@ body {
 
 
 .page-footer-title {
+    margin-top: 0;
+    margin-bottom: 14px;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 28px;
@@ -288,6 +342,7 @@ body {
     display: flex;
     width: 940px;
     margin: 0 auto;
+    padding: 40px 0; 
 }
 
 .footer-address {
@@ -329,7 +384,27 @@ body {
 .footer-social {
     margin-left: auto;
     max-width: 190px;
+}
 
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap; 
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-social-item {
+    width: 56px;
+    height: 44px;
+    /* Теперь дадим минимальные размеры для контейнеров иконок, чтобы у них было большая область клика и при меньшем размеры иконок контейнер оставался в этих минимальных размерах. */
+    margin-right: 8px; 
+    margin-bottom: 8px;
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+  /* Для каждой третьей социальной сети убираем отступ справа. Добавим боковые отступы, чтобы социальные сети не прилипали друг к другу. Видим, что элементы перестали помещаться. Сейчас поправим. */
 }
 
 
@@ -439,8 +514,7 @@ body {
 /* from eCSSTractor
 
 
-.visually-hidden {
-}
+
 .breadcrumbs-item {
 }
 .catalog-products {
