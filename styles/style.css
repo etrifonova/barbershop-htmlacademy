@@ -410,21 +410,34 @@ body {
 
 /* КАТАЛОГ */
 
+.main-container {
+    flex-grow: 1;
+    padding-top: 64px;
+    padding-bottom: 60px;
+
+}
 
 .main-inner {
+    padding-top: 40px;
     color: #242424;
     background-color: #FBF7F4;
     background-image: url("/img/bg-noisy.png");
 }
 
 .inner-header-title {
+    margin-top: 0;
+    margin-bottom: 16px; 
     font-size: 32px;
     line-height: 35px;
     text-transform: uppercase;
 }
 
 .breadcrumbs {
+    margin: 0;
+    padding: 0; 
     color: #242424;
+    display: flex;
+    list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -460,8 +473,31 @@ body {
 .sorting-container {
     color: #000000;
     background-color: #FFFFFF;
+    margin-bottom: 16px;
+    padding: 16px; 
+    
+    display: flex;
 }
 
+
+.sorting-type {
+    margin-right: auto;
+}
+
+/* Чтобы любые элементы были прижаты справа в блоке контейнере для <select> укажем margin-right: auto;. */
+
+.sorting-container .button {
+    width: 56px;
+    height: 44px;
+}
+
+
+.product-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
 
 .button-light {
     color: #242424;
@@ -490,16 +526,42 @@ body {
     text-transform: uppercase;
 }
 
-.pagination {
+.pagination-container {
+    display: flex;
+    padding: 16px;
     background-color: #FFFFFF;
 }
 
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .pagination-link {
+    display: block;
+    box-sizing: border-box;
+    width: 50px;
+    height: 44px;
+    padding: 14px 20px;
+    line-height: 16px;
+    font-weight: 700;
     color: #FFFFFF;
     background-color: #000000;
     text-decoration: none;
-    line-height: 16px;
-    font-weight: 700;
+}
+
+.pagination-clear {
+  background-color: transparent;
+}
+
+.pagination-show-more {
+    margin-left: auto;
 }
 
 .pagination-current {
@@ -545,11 +607,7 @@ body {
 }
 .button {
 }
-.sorting-type {
-}
 .select-control {
-}
-.product-list {
 }
 .product-card-image {
 }
