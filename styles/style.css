@@ -83,7 +83,7 @@ body {
     padding: 0;
 }
 
-
+/* Pages */
 
 .page-header {
     color: #FFFFFF;
@@ -286,6 +286,33 @@ body {
     width: 430px;
   }
 
+.appointment-form {
+    display: grid;
+    grid-template-columns: 114px 74px 208px;
+    gap: 20px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.appointment-form  .info {
+    display: none;
+  }
+  
+
+.appointment-form-name {
+    grid-column: 1 / -1;
+    /* Чтобы растянуть эту область на весь ряд, используем свойство grid-column со значением 1 / -1. При такой записи началом области будет первая линия, а концом — последняя линия, при любом количестве грид-линий. */
+}
+
+.appointment-submit {
+    grid-column: 1 / -1;
+    justify-self: start;
+
+}
 
 .appointment-title {
     margin-top: 0;
@@ -493,11 +520,23 @@ body {
 
 
 .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 220px); 
     list-style-type: none;
     margin: 0;
+    margin-bottom: 24px;
     padding: 0;
-
+    gap: 20px; 
 }
+
+/* Комментарий от Академии:
+
+Каталог на гридах свёрстан. Подведём итоги и сравним с флексами:
+
+не нужно помнить про сложение между всем каталогом и пагинацией;
+гриды сразу хорошо работают с любым количеством элементов. Не нужно подбирать свойства как с justify-content;
+не нужно обнулять отступы, чтобы помещались элементы.
+Итог: гридами сверстать каталалог товара проще, чем флексами. Но флексами это тоже можно сделать, просто сложнее. */
 
 .button-light {
     color: #242424;
@@ -507,15 +546,34 @@ body {
 
 .product-card {
     background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    
 }
+
+.product-card:nth-child(3n) {
+    margin-right: 0;
+  }
 
 .product-card-link {
     text-decoration: none;
 }
 
+.product-card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .product-card-title {
     font-weight: 700;
     color: #242424;
+}
+
+.product-card-title-link {
+    margin-top: 16px;
+    margin-bottom: 8px;
 }
 
 .product-card-price {
@@ -524,7 +582,14 @@ body {
     font-weight: 700;
     color: #814B18;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
+
+.product-card-button {
+  margin-top: auto;
+}
+
+/* PAGINATION */
 
 .pagination-container {
     display: flex;
