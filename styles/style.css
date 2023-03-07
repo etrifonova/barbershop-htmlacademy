@@ -70,17 +70,24 @@ body {
     overflow: hidden;
 }
 
+
+/* Button */
 .button {
-    font-family: inherit;
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 700;
-    text-align: center;
-    color: #FFFFFF;
-    background-color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 }
 
 /* Pages */
@@ -154,7 +161,7 @@ body {
 .main-index {
     color: #FFFFFF;
     background: #000000;
-    background-image: url("/img/bg-image.jpg");
+    background-image: url("img/bg-image.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
@@ -205,7 +212,7 @@ body {
     padding: 0 40px;
     color: #242424;
     background-color: #FBF7F4;
-    background-image: url("/img/bg-noisy.png");
+    background-image: url("img/bg-noisy.png");
     margin-bottom: 32px;
     padding: 40px;
 }
@@ -249,6 +256,86 @@ body {
     text-transform: uppercase;
 }
 
+.slider-image {
+  display: block;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.slider-button {
+  width: 48px;
+  height: 60px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+  background-image: url("img/arrow-right.svg");
+  /* стрелки не видно на странице */
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.slider-button:hover {
+  background-color: #814B18;
+}
+
+.slider-button:focus {
+  outline: 2px solid #DBB590;
+  background-color: #4E2E0E;
+}
+
+.slider-prev {
+  transform: rotate(180deg);
+}
+
+.slider-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider-pagination-item {
+  margin: 0 4px;
+}
+
+.slider-pagination-button {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  background-color: #DBDBDB;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+} 
+
+.slider-pagination-button:hover {
+  background-color: #AF7842;
+}
+
+.slider-pagination-button:focus {
+  background-color: #DBB590;
+  outline: none;
+}
+
+.slider-pagination-button-current {
+  background-color: #242424;
+}
 
 .contacts {
     width: 350px;
@@ -311,7 +398,7 @@ body {
 .appointment-submit {
     grid-column: 1 / -1;
     justify-self: start;
-
+    margin-top: 9px;
 }
 
 .appointment-title {
@@ -328,18 +415,83 @@ body {
   }
 
 .form-label {
+    margin-bottom: 8px;
     line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
+.form-label-icon {
+  position: relative;
+  padding-right: 16px;
+}
+
+.info {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-top: 4px;
+  margin-left: 2px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  background-image: url("img/info.svg");
+  /* очередной свг не отображается на странице */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Field */
+.field {
+  margin: 0;
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 2px solid #242424;
+}
+
+/* Hover, Focus */
+.field:hover,
+.field:focus {
+  border-color: #AF7842;
+}
+
+.field:focus {
+  outline: 2px solid #DBB590;
+}
+
+/* Disabled */
+.field:disabled,
+.field:disabled:hover {
+  color: #595959;
+  background-color: #DBB590;
+  border-color: #595959;
+}
+
+/* Invalid */
+.field:invalid {
+  box-shadow: none;
+}
+
+.field:focus:invalid {
+  border-color: #EA5454;
+}
+
+/* Placeholder */
+.field::placeholder {
+  color: #DBDBDB;
+  opacity: 1;
+}
+
+/* Footer */
 
 .page-footer {
     font-size: 14px;
     font-weight: 700;
     color: #FFFFFF;
     background-color: #242424;
-    background-image: url("/img/bg-noisy.png"); 
+    background-image: url("img/bg-noisy.png"); 
     background-repeat: repeat;
 }
 
@@ -408,6 +560,28 @@ body {
     text-transform: uppercase;
 }
 
+.newsletter-email {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.newsletter-email .field {
+  width: 192px;
+}
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-button {
+  width: 56px;
+  height: 44px;
+  background-image: url("images/arrow-tail-right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
 .footer-social {
     margin-left: auto;
     max-width: 190px;
@@ -448,7 +622,7 @@ body {
     padding-top: 40px;
     color: #242424;
     background-color: #FBF7F4;
-    background-image: url("/img/bg-noisy.png");
+    background-image: url("img/bg-noisy.png");
 }
 
 .inner-header-title {
@@ -480,11 +654,20 @@ body {
     margin-right: 20px;
 }
 
+/* Group */
+.catalog-filter-group {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  border: none;
+}
+
 .catalog-right-column {
     width: 700px;
 }
 
 .catalog-filter-title {
+    margin-bottom: 22px;
     font-size: 20px;
     line-height: 28px;
     font-weight: 700;
@@ -495,6 +678,76 @@ body {
 
 .catalog-filter-label {
     font-weight: 700;
+}
+
+/* Range */
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 16px;
+  background-color: #242424;
+  border-radius: 2px;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #AF7842;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 2px solid #242424;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background-color: #DBB590;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+  outline: 3px solid #DBB590;
+} 
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-filter-label {
+  display: flex;
+  margin-right: 5px;
+}
+
+.range-input {
+  width: 30px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .sorting-container {
@@ -703,8 +956,6 @@ body {
 .page-footer-title {
 }
 .newsletter-form {
-}
-.newsletter-email {
 }
 .field {
 }
