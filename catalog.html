@@ -101,36 +101,42 @@
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="visually-hidden control-input" type="checkbox" name="bed-head-for-men">
+                                    <span class="control-mark"></span>
                                     <span class="control-label">Bed Head for Men</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="visually-hidden control-input" type="checkbox" name="homme-deep-cleansing-cool" checked>
+                                    <span class="control-mark"></span>
                                     <span class="control-label">Homme Deep Cleansing Cool</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="visually-hidden control-input" type="checkbox" name="so-intense" checked>
+                                    <span class="control-mark"></span>
                                     <span class="control-label">So Intense</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="visually-hidden control-input" type="checkbox" name="sprekenhus">
+                                    <span class="control-mark"></span>
                                     <span class="control-label">Sprekenhus</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="visually-hidden control-input" type="checkbox" name="firm-store">
+                                    <span class="control-mark"></span>
                                     <span class="control-label">Firm Storе</span>
                                 </label>
                             </li>
                             <li class="catalog-filter-item">
                                 <label class="control">
                                     <input class="visually-hidden control-input" type="checkbox" name="winter-body" checked>
+                                    <span class="control-mark"></span>
                                     <span class="control-label">Winter Body</span>
                                 </label>
                             </li>
@@ -168,21 +174,30 @@
                 </form>
 
                 <div class="catalog-right-column">
-                    <div class="sorting-container">
+                  <div class="sorting-container">
                     <form class="sorting-type">
+                      <div class="select">
                         <label class="visually-hidden" for="sorting">Сортировка</label>
-                        <select class="select-control" name="sorting" id="sorting">
-                            <option value="popular">Сначала популярное</option>
-                            <option value="cheap">Сначала дешёвое</option> 
-                            <option value="expensive">Сначала дорогое</option>   
+                        <select class="select-control" id="sorting">
+                          <option value="popular">Сначала популярное</option>
+                          <option value="cheap">Сначала дешёвое</option>
+                          <option value="expensive">Сначала дорогое</option>
                         </select>
-                        <button class="visually-hidden" type="submit">Отсортировать продукты</button>
+                      </div>
+                      <button class="visually-hidden" type="submit">Отсортировать продукты</button>
                     </form>
-                    <a href ="#" class="button button-light">
-                        <span class="visually-hidden">Показать список</span>
+      
+                    <a href="#" class="card-grid-toggle" type="button">
+                      <span class="visually-hidden">Показать список</span>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M2 0a2 2 0 100 4 2 2 0 000-4zm0 6a2 2 0 100 4 2 2 0 000-4zm-2 8a2 2 0 114 0 2 2 0 01-4 0zM7 1a1 1 0 000 2h8a1 1 0 100-2H7zM6 8a1 1 0 011-1h8a1 1 0 110 2H7a1 1 0 01-1-1zm1 5a1 1 0 100 2h8a1 1 0 100-2H7z" />
+                      </svg>
                     </a>
-                    <a href ="#" class="button">
-                        <span class="visually-hidden">Показать карточки</span>
+                    <a href="#" class="card-grid-toggle card-grid-toggle-current" type="button">
+                      <span class="visually-hidden">Показать карточки</span>
+                      <svg width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                        <path d="M0 2a2 2 0 114 0 2 2 0 01-4 0zm6 0a2 2 0 114 0 2 2 0 01-4 0zm10 0a2 2 0 10-4 0 2 2 0 004 0zM0 8a2 2 0 114 0 2 2 0 01-4 0zm10 0a2 2 0 10-4 0 2 2 0 004 0zm2 0a2 2 0 114 0 2 2 0 01-4 0zm-8 6a2 2 0 10-4 0 2 2 0 004 0zm2 0a2 2 0 114 0 2 2 0 01-4 0zm10 0a2 2 0 10-4 0 2 2 0 004 0z" />
+                      </svg>
                     </a>
                 </div>
 

@@ -88,28 +88,27 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-}
 
 /* Pages */
 
 .page-header {
-    color: #FFFFFF;
-    background: #000000;
+  color: #FFFFFF;
+  background: #000000;
 }
 
 .navigation {
-    display: flex;
-    width: 940px;
-    margin: 0 auto;
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
 }
 
 .nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 470px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 470px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 /* Задача: сделать так, чтобы элементы шли друг за другом, и учесть переполнение элементами.
@@ -132,6 +131,7 @@ body {
 }
 
 .nav-link {
+  position: relative;
     display: block; 
     /* поменяли display, чтобы сработали отступы по вертикали  */
     font-family: "PT Sans Narrow", sans-serif;
@@ -750,19 +750,138 @@ body {
   margin: 0;
 }
 
-.sorting-container {
-    color: #000000;
-    background-color: #FFFFFF;
-    margin-bottom: 16px;
-    padding: 16px; 
-    
-    display: flex;
+
+
+/* Control */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
 }
 
+/* Mark */
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #242424;
+}
+
+.control:hover .control-mark {
+  border-color: #814B18;
+}
+
+.control-input:disabled + .control-mark {
+  /* The “+” sign selector is used to select the elements that are placed immediately after the specified element but not inside the particular elements. Example: https://www.w3schools.com/cssref/sel_element_pluss.php */
+  border-color: #242424;
+}
+
+/* добавим крестик для выбранного чекбокса */
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 12px;
+  height: 2px;
+  background-color: #242424;
+  content: "";
+}
+
+/* Развернём линии так, чтобы получился крестик. */
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  transform: rotate(45deg);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  transform: rotate(-45deg);
+}
+
+/* Radio */
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+/* Для выбранной радио-кнопки добавим состояние */
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #242424;
+  border-radius: 50%;
+  content: "";
+}
+
+
+/* Label */
+.control-label {
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.sorting-container {
+  display: flex;
+  color: #000000;
+  background-color: #FFFFFF;
+  margin-bottom: 16px;
+  padding: 16px; 
+}
 
 .sorting-type {
     margin-right: auto;
 }
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  margin-right: auto;
+}
+
+/* Control */
+.select-control {
+  width: 100%;
+  padding: 8px 14px;
+  padding-right: 48px;
+  font: inherit;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  border: 2px solid #242424;
+  background-image: url("images/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border-color: #AF7842;
+}
+
+.select-control:focus {
+  outline: 2px solid #DBB590;
+}
+
+/* СРАВНИВАЮ СВОЙ КОД И КОД В ДЕМКЕ - НЕ ВИЖУ НЕКОТОРЫХ СЕЛЕКТОРОВ.
+НАДО СКАЧАТЬ ПОСЛЕДНУЮ ВЕРСИЮ ЭТАЛОННОГО КОДА И ЕЩЕ РАЗ ВСЁ ПРОВЕРИТЬ */
+
+
 
 /* Чтобы любые элементы были прижаты справа в блоке контейнере для <select> укажем margin-right: auto;. */
 
@@ -891,84 +1010,49 @@ body {
     background-color: #595959;
 }
 
-/* from eCSSTractor
-
-
-
-.breadcrumbs-item {
-}
-.catalog-products {
-}
-.catalog-filter {
-}
-.catalog-filter-group {
-}
-.range-toggle {
-}
-.toggle-min {
-}
-.toggle-max {
-}
-.catalog-filter-input {
-}
-.catalog-filter-list {
-}
-.catalog-filter-item {
-}
-.control {
-}
-.control-input {
-}
-.control-label {
-}
-.control-mark {
-}
-.button {
-}
-.select-control {
-}
-.product-card-image {
-}
-.product-card-button {
-}
-.pagination-item {
-}
-.pagination-prev {
-}
-.pagination-next {
-}
-.page-footer {
-}
-.footer-contacts {
-}
-.footer-logo {
-}
-.footer-address {
-}
-.footer-address-text {
-}
-.footer-phone {
-}
-.footer-contacts-map-link {
-}
-.newsletter {
-}
-.page-footer-title {
-}
-.newsletter-form {
-}
-.field {
-}
-.newsletter-button {
-}
-.footer-social {
-}
-.footer-social-list {
-}
-.footer-social-item {
-}
-.about-text {
-}
-.htmlacademy-link {
+.popover {
+  /* Зададим блоку position:absolute, чтобы вытащить блок из потока на отдельный слой. Для простоты вычисления размеров блока зададим box-sizing: border-box для смены модели расчёта размеров. */
+  /* Если у блока задан position: absolute, то браузер рассчитывает размещение этого блока относительно любого другого блока, у которого есть position отличный от static. Если ни в одном из родительских блоков такого свойства нет, то положение блока рассчитывается относительно <body>.
+  Для выставления блока относительно кнопки с корзиной добавим блоку navigation-item свойство position: relative. */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 300px;
+  padding: 40px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #242424;
+  background-color: #FFFFFF;
+  min-height: 186px;
+  box-shadow: 0 18px 40px rgba(79, 70, 60, 0.16);
 }
 
+.popover-close-button {
+  /* Так как у родителя стоит position: absolute, то кнопка будет позиционироваться относительно этого окна. */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 72px;
+  height: 70px;
+}
+
+.popover-cart .popover-close-button {
+  padding-left: 44px;
+  background-image: url("img/cart-popover.svg");
+  background-repeat: no-repeat;
+  background-position: 22px center;
+}
+
+.popover-content {
+  height: 100%;
+}
+
+.popover-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 35px;
+  color: #000000;
+  text-transform: uppercase;
+}
