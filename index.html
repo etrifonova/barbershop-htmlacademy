@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Барбершоп "Бородинский"</title>
-        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
         <header class="page-header">
@@ -44,17 +44,46 @@
                           </button>
                           <div class="popover-content">
                             <h2 class="popover-title">Корзина</h2>
+                            <ul class="cart-items-list">
+                              <li class="cart-item">
+                                <p class="cart-item-title">Стрижка машинкой</p>
+                                <p class="cart-item-price">800 ₽</p>
+                                <button type="button" class="cart-item-button button">
+                                  <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
+                                  </svg>
+                                  <span class="visually-hidden">Удалить из корзины</span>
+                                </button>
+                              </li>
+                              <li class="cart-item">
+                                <p class="cart-item-title">Стрижка усов</p>
+                                <p class="cart-item-price">1200 ₽</p>
+                                <button class="cart-item-button button" type="button">
+                                  <svg width="16" height="16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.42 1l.283-.496L3.991 0H12.01l.288.504.283.496h3.049l-.136 1.12-1.577 13-.107.88H2.191l-.107-.88-1.577-13L.371 1H3.42zm.543 13L2.629 3H13.37l-1.334 11H3.963zm5.04-9.071l-.5 7 1.995.142.5-7-1.995-.142zm-3.5 7.142l-.5-7 1.994-.142.5 7-1.994.142z" />
+                                  </svg>
+                                  <span class="visually-hidden">Удалить из корзины</span>
+                                </button>
+                              </li>
+
+                            </ul>
+
+
                           </div>
                         </div>
                         <!-- Поповер — выпадающий блок, который появляется при нажатии на другой элемент. -->
                         </li>
+                        
+                        
                         <li class="nav-item">
-                          <svg class="navigation-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2h5v12H9v2h7V0H9v2zM4.293 3.707L7.536 6.95H0v2h7.536l-3.243 3.242 1.414 1.415 4.95-4.95.707-.707-.707-.707-4.95-4.95-1.414 1.414z" fill="#BDBDBD" />
+                          <a class="nav-link nav-link-login" href="#">
+                            <svg class="navigation-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2h5v12H9v2h7V0H9v2zM4.293 3.707L7.536 6.95H0v2h7.536l-3.243 3.242 1.414 1.415 4.95-4.95.707-.707-.707-.707-4.95-4.95-1.414 1.414z" fill="#BDBDBD" />
                           </svg>
-                          <a class="nav-link" href="#">Вход</a>
-                        </li>
-                    </ul>
+                    Вход
+                  </a>
+                </li>
+              </ul>
             </nav>
             
         </header>
@@ -261,5 +290,23 @@
             </section>
             </div>
         </footer>
+
+        <div class="modal-container">
+          <div class="modal modal-auth">
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <section class="modal-content">
+              <h2 class="modal-title">Личный кабинет</h2>
+            </section>
+          </div>
+
+        </div>
+        <!-- Модальное окно — компонент который выводится поверх всех других блоков, и перекрывает собой содержимое.
+
+        Окно может быть с подложкой (полупрозрачный слой под окном на макете) и без подложки.
+
+        В нашем случае модальное окно с подложкой. Создадим <div> с классом modal-container в самом конце разметки. Именно этот <div> будет подложкой. -->
+
     </body>
 </html>
