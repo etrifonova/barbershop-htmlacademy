@@ -154,14 +154,13 @@ body {
     flex-grow: 1;
     padding-top: 64px; 
     padding-bottom: 60px;
-
 }
 
 
 .main-index {
     color: #FFFFFF;
-    background: #000000;
-    background-image: url("img/bg-image.jpg");
+    background-color: #000000;
+    background-image: url('/index-bg.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
