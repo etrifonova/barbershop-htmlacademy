@@ -283,7 +283,7 @@ body {
 .main-index {
     color: #FFFFFF;
     background-color: #000000;
-    background-image: url('/index-bg.jpg');
+    background-image: url('/img/index-bg.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
