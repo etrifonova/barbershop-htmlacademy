@@ -11,7 +11,7 @@
       <!-- ПРОВЕРИТЬ HEADER -->
       <header class="page-header">
             <nav class="navigation">
-                <a class="navigation-logo" href="index.html">
+                <a class="nav-logo" href="index.html">
                     <img class="page-header-logo" alt="Логотип барбершоп «Бородинский»" src="./img/logo-short-light.svg" width="140" height="18">
                 </a>
                 <ul class="nav-list">
@@ -19,7 +19,7 @@
                         <a class="nav-link" href="about.html">О нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="catalog.html">Каталог</a>
+                        <a class="nav-link nav-link-current" href="catalog.html">Каталог</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="faq.html">Частые вопросы</a>
@@ -32,15 +32,6 @@
                           <svg class="nav-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11 6.5C11 8.98528 8.98528 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5ZM10.3347 11.7489C9.25973 12.5356 7.9341 13 6.5 13C2.91015 13 0 10.0899 0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5C13 7.9341 12.5356 9.25973 11.7489 10.3347L15.7071 14.2929L14.2929 15.7071L10.3347 11.7489Z" fill="#BDBDBD"/>
                           </svg>
-                            <!-- 3. How to use inline SVG images
-SVG images can be written directly into the HTML document using the<svg> </svg> tag.
-
-To do this, open the SVG image in VS code or your preferred IDE, copy the code, and paste it inside the <body> element in your HTML document. -->
-  <!-- The aria-hidden attribute can be used to hide non-interactive content from the accessibility API. Adding aria-hidden="true" to an element removes that element and all of its children from the accessibility tree.
-  
-  What is the difference between hidden and aria hidden?
-hidden means hidden to everyone. aria-hidden means hidden to screen readers and similar tools. This is useful for components which are used purely for formatting and contain no real content, for instance.
--->
                           <span class="visually-hidden">Поиск</span></a>
                     </li>
                     
@@ -51,74 +42,41 @@ hidden means hidden to everyone. aria-hidden means hidden to screen readers and 
                             </svg>
                             <span class="visually-hidden">Корзина</span>
                         </a>
-                        
-                        <div class="popover popover-cart">
-                          <button class="popover-close-button button button-light">
-                            2
-                            <span class="visually-hidden">Закрыть</span>
-                          </button>
-                          <div class="popover-content">
-                            <h2 class="popover-title">Корзина</h2>
-                            <ul class="cart-items-list">
-                              <li class="cart-item">
-                                <p class="cart-item-title">Стрижка машинкой</p>
-                                <p class="cart-item-price">800 ₽</p>
-                                <button type="button" class="cart-item-button button">
-                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.41989 1L3.7034 0.503861L3.99132 0H4.57164H11.4288H12.0091L12.297 0.503861L12.5805 1H14.5002H15.6288L15.4929 2.12042L13.916 15.1204L13.8093 16H12.9233H3.07714H2.19111L2.08442 15.1204L0.507491 2.12042L0.371582 1H1.50021H3.41989ZM3.96317 14L2.62885 3H13.3716L12.0373 14H3.96317ZM9.00276 4.92875L8.50276 11.9288L10.4977 12.0712L10.9977 5.07125L9.00276 4.92875ZM5.50276 12.0712L5.00276 5.07125L6.99767 4.92875L7.49767 11.9288L5.50276 12.0712Z" fill="white"/>
-                                  </svg>
-                                  <span class="visually-hidden">Удалить из корзины</span>
-                                </button>
-                              </li>
-                              <li class="cart-item">
-                                <p class="cart-item-title">Стрижка усов</p>
-                                <p class="cart-item-price">1200 ₽</p>
-                                <button class="cart-item-button button" type="button">
-                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.41989 1L3.7034 0.503861L3.99132 0H4.57164H11.4288H12.0091L12.297 0.503861L12.5805 1H14.5002H15.6288L15.4929 2.12042L13.916 15.1204L13.8093 16H12.9233H3.07714H2.19111L2.08442 15.1204L0.507491 2.12042L0.371582 1H1.50021H3.41989ZM3.96317 14L2.62885 3H13.3716L12.0373 14H3.96317ZM9.00276 4.92875L8.50276 11.9288L10.4977 12.0712L10.9977 5.07125L9.00276 4.92875ZM5.50276 12.0712L5.00276 5.07125L6.99767 4.92875L7.49767 11.9288L5.50276 12.0712Z" fill="white"/>
-                                  </svg>
-                                  <span class="visually-hidden">Удалить из корзины</span>
-                                </button>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <!-- Поповер — выпадающий блок, который появляется при нажатии на другой элемент. -->
                       </li>
-                      
+
                       <li class="nav-item">
-                        <a class="nav-link nav-link-login" href="#">
-                          <svg class="nav-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2H14V14H9V16H15H16V15V1V0H15H9V2ZM4.29289 3.70711L7.53553 6.94975H0V8.94975H7.53553L4.29289 12.1924L5.70711 13.6066L10.6569 8.65685L11.364 7.94975L10.6569 7.24264L5.70711 2.29289L4.29289 3.70711Z" fill="#BDBDBD"/>
+                        <a class="nav-link" href="#">
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 8C9.65685 8 11 6.65685 11 5C11 3.34315 9.65685 2 8 2C6.34315 2 5 3.34315 5 5C5 6.65685 6.34315 8 8 8ZM8 10C4.68629 10 2 12.6863 2 16H14C14 12.6863 11.3137 10 8 10Z" fill="#BDBDBD"/>
                           </svg>
-                          Вход
+                          <span class="visually-hidden">Вход</span>
                         </a>
                       </li>
                     </ul>
             </nav>
-            
-        </header>
+          </header>
 
         <main class="main-inner main-container">
             <div class="page-container">
+              <!-- Шапка главной части страницы -->
             <header class="inner-header">
-                <h1 class="inner-header-title">Каталог</h1>
-                <ul class="breadcrumbs">
-                    <li class="breadcrumbs-item">
-                        <a class="breadcrumbs-link" href="index.html">Главная</a>
-                    </li>
-                    <li class="breadcrumbs-item">
-                        <a class="breadcrumbs-link">Каталог</a>
-                    </li>
-                </ul>
+              <h1 class="inner-header-title">Каталог</h1>
+              <ul class="breadcrumbs">
+                <li class="breadcrumbs-item">
+                  <a class="breadcrumbs-link" href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs-item">
+                  <a class="breadcrumbs-link">Каталог</a>
+                </li>
+              </ul>
             </header>
-
 
             <section class="catalog-products">
                 <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
+                <!-- Фильтр -->
                 <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                     <fieldset class="catalog-filter-group"> <!-- В формах для группировки нескольких элементов используется тег <fieldset>, а для заголовка такой группы используется тег <legend>-->
-                        <legend class="catalog-filter-title">Цена</legend>
+                        <legend class="catalog-filter-title">Цена:</legend>
 
                         <div class="range">
                           <div class="range-scale">
@@ -144,84 +102,84 @@ hidden means hidden to everyone. aria-hidden means hidden to screen readers and 
                     </fieldset>
                     
                     <fieldset class="catalog-filter-group">
-                        <legend class="catalog-filter-title">Производители</legend>
+                      <legend class="catalog-filter-title">Производители</legend>
                         <ul class="catalog-filter-list">
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="checkbox" name="bed-head-for-men">
-                                    <span class="control-mark"></span>
-                                    <span class="control-label">Bed Head for Men</span>
-                                </label>
+                          <li class="catalog-filter-item">
+                            <label class="control">
+                              <input class="visually-hidden control-input" type="checkbox" name="bed-head-for-men">
+                                <span class="control-mark"></span>
+                                 <span class="control-label">Bed Head for Men</span>
+                            </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="checkbox" name="homme-deep-cleansing-cool" checked>
-                                    <span class="control-mark"></span>
-                                    <span class="control-label">Homme Deep Cleansing Cool</span>
-                                </label>
+                              <label class="control">
+                                <input class="visually-hidden control-input" type="checkbox" name="homme-deep-cleansing-cool" checked>
+                                <span class="control-mark"></span>
+                                <span class="control-label">Homme Deep Cleansing Cool</span>
+                              </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="checkbox" name="so-intense" checked>
-                                    <span class="control-mark"></span>
-                                    <span class="control-label">So Intense</span>
-                                </label>
+                              <label class="control">
+                                <input class="visually-hidden control-input" type="checkbox" name="so-intense" checked>
+                                <span class="control-mark"></span>
+                                <span class="control-label">So Intense</span>
+                              </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="checkbox" name="sprekenhus">
-                                    <span class="control-mark"></span>
-                                    <span class="control-label">Sprekenhus</span>
-                                </label>
+                              <label class="control">
+                                <input class="visually-hidden control-input" type="checkbox" name="sprekenhus">
+                                <span class="control-mark"></span>
+                                <span class="control-label">Sprekenhus</span>
+                              </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="checkbox" name="firm-store">
-                                    <span class="control-mark"></span>
-                                    <span class="control-label">Firm Storе</span>
-                                </label>
+                              <label class="control">
+                                <input class="visually-hidden control-input" type="checkbox" name="firm-store">
+                                <span class="control-mark"></span>
+                                <span class="control-label">Firm Storе</span>
+                              </label>
                             </li>
                             <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="checkbox" name="winter-body" checked>
-                                    <span class="control-mark"></span>
-                                    <span class="control-label">Winter Body</span>
-                                </label>
+                              <label class="control">
+                                <input class="visually-hidden control-input" type="checkbox" name="winter-body" checked>
+                                <span class="control-mark"></span>
+                                <span class="control-label">Winter Body</span>
+                              </label>
                             </li>
                         </ul>
                     </fieldset>
 
                     <fieldset class="catalog-filter-group">
-                        <legend class="catalog-filter-title">Группы товаров</legend>
-                        <ul class="catalog-filter-list">
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="radio" name="product-group" value="shaving supplies">
-                                    <span class="control-mark"></span>
-                                <span class="control-label">Бритвенные принадлежности</span>
-                                </label>
-                            </li>
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="radio" name="product-group" value="shaving supplies" checked>
-                                    <span class="control-mark"></span>
-                                <span class="control-label">Средства для ухода</span>
-                                </label>
-                            </li>
-                            <li class="catalog-filter-item">
-                                <label class="control">
-                                    <input class="visually-hidden control-input" type="radio" name="product-group" value="shaving supplies">
-                                    <span class="control-mark"></span>
-                                <span class="control-label">Аксессуары</span>
-                                </label>
-                            </li>
-                        </ul>
+                      <legend class="catalog-filter-title">Группы товаров</legend>
+                      <ul class="catalog-filter-list">
+                        <li class="catalog-filter-item">
+                          <label class="control">
+                            <input class="visually-hidden control-input" type="radio" name="product-group" value="shaving supplies">
+                            <span class="control-mark"></span>
+                            <span class="control-label">Бритвенные принадлежности</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter-item">
+                          <label class="control">
+                            <input class="visually-hidden control-input" type="radio" name="product-group" value="shaving supplies" checked>
+                            <span class="control-mark"></span>
+                            <span class="control-label">Средства для ухода</span>
+                          </label>
+                        </li>
+                        <li class="catalog-filter-item">
+                          <label class="control">
+                            <input class="visually-hidden control-input" type="radio" name="product-group" value="shaving supplies">
+                            <span class="control-mark"></span>
+                            <span class="control-label">Аксессуары</span>
+                          </label>
+                        </li>
+                      </ul>
                     </fieldset>
-
                     <button class="button" type="submit">Показать</button>
                 </form>
 
                 <div class="catalog-right-column">
+                  <!-- Сортировка -->
                   <div class="sorting-container">
                     <form class="sorting-type">
                       <div class="select">
@@ -237,106 +195,127 @@ hidden means hidden to everyone. aria-hidden means hidden to screen readers and 
       
                     <a href="#" class="card-grid-toggle" type="button">
                       <span class="visually-hidden">Показать список</span>
-                      <svg width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M2 0a2 2 0 100 4 2 2 0 000-4zm0 6a2 2 0 100 4 2 2 0 000-4zm-2 8a2 2 0 114 0 2 2 0 01-4 0zM7 1a1 1 0 000 2h8a1 1 0 100-2H7zM6 8a1 1 0 011-1h8a1 1 0 110 2H7a1 1 0 01-1-1zm1 5a1 1 0 100 2h8a1 1 0 100-2H7z" />
-                      </svg>
+                      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g clip-path="url(#clip0_103522_1075)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895431 0 0 0.895431 0 2C0 3.10457 0.895431 4 2 4C3.10457 4 4 3.10457 4 2C4 0.895431 3.10457 0 2 0ZM2 6C0.895431 6 0 6.89543 0 8C0 9.10457 0.895431 10 2 10C3.10457 10 4 9.10457 4 8C4 6.89543 3.10457 6 2 6ZM0 14C0 12.8954 0.895431 12 2 12C3.10457 12 4 12.8954 4 14C4 15.1046 3.10457 16 2 16C0.895431 16 0 15.1046 0 14ZM7 1C6.44772 1 6 1.44772 6 2C6 2.55228 6.44772 3 7 3H15C15.5523 3 16 2.55228 16 2C16 1.44772 15.5523 1 15 1H7ZM6 8C6 7.44772 6.44772 7 7 7H15C15.5523 7 16 7.44772 16 8C16 8.55228 15.5523 9 15 9H7C6.44772 9 6 8.55228 6 8ZM7 13C6.44772 13 6 13.4477 6 14C6 14.5523 6.44772 15 7 15H15C15.5523 15 16 14.5523 16 14C16 13.4477 15.5523 13 15 13H7Z" fill="#242424"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 0C0.895431 0 0 0.895431 0 2C0 3.10457 0.895431 4 2 4C3.10457 4 4 3.10457 4 2C4 0.895431 3.10457 0 2 0ZM2 6C0.895431 6 0 6.89543 0 8C0 9.10457 0.895431 10 2 10C3.10457 10 4 9.10457 4 8C4 6.89543 3.10457 6 2 6ZM0 14C0 12.8954 0.895431 12 2 12C3.10457 12 4 12.8954 4 14C4 15.1046 3.10457 16 2 16C0.895431 16 0 15.1046 0 14ZM7 1C6.44772 1 6 1.44772 6 2C6 2.55228 6.44772 3 7 3H15C15.5523 3 16 2.55228 16 2C16 1.44772 15.5523 1 15 1H7ZM6 8C6 7.44772 6.44772 7 7 7H15C15.5523 7 16 7.44772 16 8C16 8.55228 15.5523 9 15 9H7C6.44772 9 6 8.55228 6 8ZM7 13C6.44772 13 6 13.4477 6 14C6 14.5523 6.44772 15 7 15H15C15.5523 15 16 14.5523 16 14C16 13.4477 15.5523 13 15 13H7Z" fill="url(#pattern0)"/>
+                        </g>
+                        <defs>
+                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="5" height="5">
+                        <use xlink:href="#image0_103522_1075" transform="scale(0.0625)"/>
+                        </pattern>
+                        <clipPath id="clip0_103522_1075">
+                        <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                        <image id="image0_103522_1075" width="80" height="80" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                        </svg>
+                        
                     </a>
                     <a href="#" class="card-grid-toggle card-grid-toggle-current" type="button">
                       <span class="visually-hidden">Показать карточки</span>
-                      <svg width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                        <path d="M0 2a2 2 0 114 0 2 2 0 01-4 0zm6 0a2 2 0 114 0 2 2 0 01-4 0zm10 0a2 2 0 10-4 0 2 2 0 004 0zM0 8a2 2 0 114 0 2 2 0 01-4 0zm10 0a2 2 0 10-4 0 2 2 0 004 0zm2 0a2 2 0 114 0 2 2 0 01-4 0zm-8 6a2 2 0 10-4 0 2 2 0 004 0zm2 0a2 2 0 114 0 2 2 0 01-4 0zm10 0a2 2 0 10-4 0 2 2 0 004 0z" />
-                      </svg>
+                        <svg width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_103522_1120)">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.895431 0.895431 0 2 0C3.10457 0 4 0.895431 4 2C4 3.10457 3.10457 4 2 4C0.895431 4 0 3.10457 0 2ZM6 2C6 0.895431 6.89543 0 8 0C9.10457 0 10 0.895431 10 2C10 3.10457 9.10457 4 8 4C6.89543 4 6 3.10457 6 2ZM16 2C16 0.895431 15.1046 0 14 0C12.8954 0 12 0.895431 12 2C12 3.10457 12.8954 4 14 4C15.1046 4 16 3.10457 16 2ZM0 8C0 6.89543 0.895431 6 2 6C3.10457 6 4 6.89543 4 8C4 9.10457 3.10457 10 2 10C0.895431 10 0 9.10457 0 8ZM10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10C9.10457 10 10 9.10457 10 8ZM12 8C12 6.89543 12.8954 6 14 6C15.1046 6 16 6.89543 16 8C16 9.10457 15.1046 10 14 10C12.8954 10 12 9.10457 12 8ZM4 14C4 12.8954 3.10457 12 2 12C0.895431 12 0 12.8954 0 14C0 15.1046 0.895431 16 2 16C3.10457 16 4 15.1046 4 14ZM6 14C6 12.8954 6.89543 12 8 12C9.10457 12 10 12.8954 10 14C10 15.1046 9.10457 16 8 16C6.89543 16 6 15.1046 6 14ZM16 14C16 12.8954 15.1046 12 14 12C12.8954 12 12 12.8954 12 14C12 15.1046 12.8954 16 14 16C15.1046 16 16 15.1046 16 14Z" fill="white"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_103522_1120">
+                          <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                          </defs>
+                          </svg>
+                          
                     </a>
                 </div>
 
+                <!-- Список товаров -->
                 <ul class="product-list">
                     <li class="product-card">
                         <a class="product-card-link" href="product.html">
-                            <img class="product-card-image" src="/img/product-1.jpg" alt="Шампунь для мужчин Brews Daily" width="220" height="168">
+                          <img class="product-card-image" src="./img/product-1.jpg" alt="Шампунь для мужчин Brews Daily" width="220" height="168">
                         </a>
                         <div class="product-card-content">
-                            <a class="product-card-title-link" href="">
-                              <h3 class="product-card-title">Шампунь для мужчин Brews Daily</h3>
-                            </a>
-                            <b class="product-card-price">744 ₽</b>
+                          <a class="product-card-title-link" href="">
+                            <h3 class="product-card-title">Шампунь для мужчин Brews Daily</h3>
+                          </a>
+                            <span class="product-card-price">744 ₽</span>
                             <a class="product-card-button button" href="#">Купить</a>
                         </div>
                     </li>
 
                     <li class="product-card">
-                        <a class="product-card-link" href="product.html">
-                            <img class="product-card-image" src="/img/product-2.jpg" alt="Syoss шампунь Men Power & Strength" width="220" height="168">
-                        </a>
+                      <a class="product-card-link" href="product.html">
+                        <img class="product-card-image" src="./img/product-2.jpg" alt="Syoss шампунь Men Power & Strength" width="220" height="168">
+                      </a>
                         <div class="product-card-content">
-                            <a class="product-card-title-link" href="">
-                              <h3 class="product-card-title">Syoss шампунь Men Power &amp; Strength</h3>
-                            </a>
-                            <b class="product-card-price">160 ₽</b>
-                            <a class="product-card-button button" href="#">Купить</a>
+                          <a class="product-card-title-link" href="">
+                            <h3 class="product-card-title">Syoss шампунь Men Power &amp; Strength</h3>
+                          </a>
+                          <span class="product-card-price">160 ₽</span>
+                          <a class="product-card-button button" href="#">Купить</a>
                         </div>
                     </li>
                     
                     <li class="product-card">
-                        <a class="product-card-link" href="product.html">
-                            <img class="product-card-image" src="/img/product-3.jpg" alt="Schauma шампунь для мужчин «Сила и объём с хмелем»" width="220" height="168">
+                      <a class="product-card-link" href="product.html">
+                        <img class="product-card-image" src="./img/product-3.jpg" alt="Schauma шампунь для мужчин «Сила и объём с хмелем»" width="220" height="168">
                         </a>
                         <div class="product-card-content">
-                            <a class="product-card-title-link" href="">
-                              <h3 class="product-card-title">Schauma шампунь для мужчин «Сила и объём с хмелем»</h3>
-                            </a>
-                            <b class="product-card-price">94 ₽</b>
-                            <a class="product-card-button button" href="#">Купить</a>
+                          <a class="product-card-title-link" href="">
+                            <h3 class="product-card-title">Schauma шампунь для мужчин «Сила и объём с хмелем»</h3>
+                          </a>
+                          <span class="product-card-price">94 ₽</span>
+                          <a class="product-card-button button" href="#">Купить</a>
                         </div>
                     </li>
-
                     
                     <li class="product-card">
-                        <a class="product-card-link" href="product.html">
-                            <img class="product-card-image" src="/img/product-4.jpg" alt="Nivea Men шампунь-уход  «Экстремальная свежесть с ментолом»" width="220" height="168">
+                      <a class="product-card-link" href="product.html">
+                        <img class="product-card-image" src="./img/product-4.jpg" alt="Nivea Men шампунь-уход  «Экстремальная свежесть с ментолом»" width="220" height="168">
+                      </a>
+                      <div class="product-card-content">
+                        <a class="product-card-title-link" href="">
+                        <h3 class="product-card-title">Nivea Men шампунь-уход  «Экстремальная свежесть с ментолом»</h3>
                         </a>
-                        <div class="product-card-content">
-                            <a class="product-card-title-link" href="">
-                              <h3 class="product-card-title">Nivea Men шампунь-уход  «Экстремальная свежесть с ментолом»</h3>
-                            </a>
-                            <b class="product-card-price">173 ₽</b>
-                            <a class="product-card-button button" href="#">Купить</a>
-                        </div>
+                        <span class="product-card-price">173 ₽</span>
+                        <a class="product-card-button button" href="#">Купить</a>
+                      </div>
                     </li>
 
                     <li class="product-card">
-                        <a class="product-card-link" href="product.html">
-                            <img class="product-card-image" src="/img/product-5.jpg" alt="Шампунь Amplifier Thickening" width="220" height="168">
+                      <a class="product-card-link" href="product.html">
+                        <img class="product-card-image" src="./img/product-5.jpg" alt="Шампунь Amplifier Thickening" width="220" height="168">
+                      </a>
+                      <div class="product-card-content">
+                        <a class="product-card-title-link" href="">
+                          <h3 class="product-card-title">Шампунь Amplifier Thickening</h3>
                         </a>
-                        <div class="product-card-content">
-                            <a class="product-card-title-link" href="">
-                              <h3 class="product-card-title">Шампунь Amplifier Thickening</h3>
-                            </a>
-                            <b class="product-card-price">441 ₽</b>
-                            <a class="product-card-button button" href="#">Купить</a>
-                        </div>
+                        <span class="product-card-price">441 ₽</span>
+                        <a class="product-card-button button" href="#">Купить</a>
+                      </div>
                     </li>      
                     
                     <li class="product-card">
-                        <a class="product-card-link" href="product.html">
-                            <img class="product-card-image" src="/img/product-6.jpg" alt="American Crew шампунь Anti-Dandruff" width="220" height="168">
+                      <a class="product-card-link" href="product.html">
+                        <img class="product-card-image" src="./img/product-6.jpg" alt="American Crew шампунь Anti-Dandruff" width="220" height="168">
+                      </a>
+                      <div class="product-card-content">
+                        <a class="product-card-title-link" href="">
+                          <h3 class="product-card-title">American Crew шампунь Anti-Dandruff</h3>
                         </a>
-                        <div class="product-card-content">
-                            <a class="product-card-title-link" href="">
-                              <h3 class="product-card-title">American Crew шампунь Anti-Dandruff</h3>
-                            </a>
-                            <b class="product-card-price">904 ₽</b>
-                            <a class="product-card-button button" href="#">Купить</a>
-                        </div>
+                        <span class="product-card-price">904 ₽</span>
+                        <a class="product-card-button button" href="#">Купить</a>
+                      </div>
                     </li>    
                 </ul>
 
-                <div class="pagination-container">
 
-                <ul class="pagination">
+                <div class="pagination-container">
+                  <ul class="pagination">
                     <li class="pagination-item">
-                        <a class="pagination-link pagination-prev pagination-disabled">
-                            <span class="visually-hidden">Предыдущая страница</span>
-                        </a>
+                      <a class="pagination-link pagination-prev pagination-disabled">
+                        <span class="visually-hidden">Предыдущая страница</span>
+                      </a>
                     </li>
                     <li class="pagination-item">
                       <a class="pagination-link pagination-current">1</a>
@@ -354,15 +333,17 @@ hidden means hidden to everyone. aria-hidden means hidden to screen readers and 
                       <a class="pagination-link" href="#">5</a>
                     </li>
                     <li class="pagination-item">
-                        <a class="pagination-link pagination-next pagination-disabled">
-                            <span class="visually-hidden">Следующая страница</span>
-                        </a>
+                      <a class="pagination-link pagination-next pagination-disabled">
+                        <span class="visually-hidden">Следующая страница</span>
+                      </a>
                     </li>
                 </ul>
                 <button class="button pagination-show-more" type="button">Показать ещё</button>
             </div>
-            </section>
-        </div>
+          </div>
+          <!-- Что за второй div? -->
+        </section>
+      </div>
     </main>
 
     <!-- Подвал -->
@@ -414,7 +395,5 @@ hidden means hidden to everyone. aria-hidden means hidden to screen readers and 
         </section>
       </div>
     </footer>
-
-    </body>
-
+  </body>
 </html>
