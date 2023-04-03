@@ -1,51 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Каталог</title>
-        
-        <link rel="stylesheet" href="/styles/style.css">
+        <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
-        <header class="page-header">
+
+      <!-- ПРОВЕРИТЬ HEADER -->
+      <header class="page-header">
             <nav class="navigation">
                 <a class="navigation-logo" href="index.html">
-                    <img class="page-header-logo" alt="Логотип барбершоп «Бородинский»" src="/img/logo-short-light.svg" width="140" height="18">
+                    <img class="page-header-logo" alt="Логотип барбершоп «Бородинский»" src="./img/logo-short-light.svg" width="140" height="18">
                 </a>
                 <ul class="nav-list">
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">О НАС</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="catalog.html">КАТАЛОГ</a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">ЧАСТЫЕ ВОПРОСЫ</a>
-                        </li>
-                        </li>
-                    </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">Частые вопросы</a>
+                    </li>
+                </ul>
                     
-                    <ul class="nav-list nav-user">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="visually-hidden">
-                                    Поиск
-                                </span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="visually-hidden">
-                                    Корзина
-                                </span>
-                            </a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Вход</a>
-                        </li>
-                        </li>
+                <ul class="nav-list nav-user">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <svg class="nav-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 6.5C11 8.98528 8.98528 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5ZM10.3347 11.7489C9.25973 12.5356 7.9341 13 6.5 13C2.91015 13 0 10.0899 0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5C13 7.9341 12.5356 9.25973 11.7489 10.3347L15.7071 14.2929L14.2929 15.7071L10.3347 11.7489Z" fill="#BDBDBD"/>
+                          </svg>
+                            <!-- 3. How to use inline SVG images
+SVG images can be written directly into the HTML document using the<svg> </svg> tag.
+
+To do this, open the SVG image in VS code or your preferred IDE, copy the code, and paste it inside the <body> element in your HTML document. -->
+  <!-- The aria-hidden attribute can be used to hide non-interactive content from the accessibility API. Adding aria-hidden="true" to an element removes that element and all of its children from the accessibility tree.
+  
+  What is the difference between hidden and aria hidden?
+hidden means hidden to everyone. aria-hidden means hidden to screen readers and similar tools. This is useful for components which are used purely for formatting and contain no real content, for instance.
+-->
+                          <span class="visually-hidden">Поиск</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <svg class="nav-icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.09068 6L3.5759 0.90519L3.66211 0H4.5714H11.4285H12.3378L12.424 0.905191L12.9093 6H14.5H15.6328L15.4922 7.12403L14.4922 15.124L14.3828 16H13.5H2.49997H1.61719L1.50769 15.124L0.507692 7.12403L0.367188 6H1.49997H3.09068ZM5.09973 6H10.9002L10.5193 2H5.48068L5.09973 6ZM3.38275 14L2.63275 8H13.3672L12.6172 14H3.38275ZM8.49997 9.5V12.5H10.5V9.5H8.49997ZM5.49997 12.5L5.49997 9.5H7.49997L7.49997 12.5H5.49997Z" fill="#BDBDBD"/>
+                            </svg>
+                            <span class="visually-hidden">Корзина</span>
+                        </a>
+                        
+                        <div class="popover popover-cart">
+                          <button class="popover-close-button button button-light">
+                            2
+                            <span class="visually-hidden">Закрыть</span>
+                          </button>
+                          <div class="popover-content">
+                            <h2 class="popover-title">Корзина</h2>
+                            <ul class="cart-items-list">
+                              <li class="cart-item">
+                                <p class="cart-item-title">Стрижка машинкой</p>
+                                <p class="cart-item-price">800 ₽</p>
+                                <button type="button" class="cart-item-button button">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.41989 1L3.7034 0.503861L3.99132 0H4.57164H11.4288H12.0091L12.297 0.503861L12.5805 1H14.5002H15.6288L15.4929 2.12042L13.916 15.1204L13.8093 16H12.9233H3.07714H2.19111L2.08442 15.1204L0.507491 2.12042L0.371582 1H1.50021H3.41989ZM3.96317 14L2.62885 3H13.3716L12.0373 14H3.96317ZM9.00276 4.92875L8.50276 11.9288L10.4977 12.0712L10.9977 5.07125L9.00276 4.92875ZM5.50276 12.0712L5.00276 5.07125L6.99767 4.92875L7.49767 11.9288L5.50276 12.0712Z" fill="white"/>
+                                  </svg>
+                                  <span class="visually-hidden">Удалить из корзины</span>
+                                </button>
+                              </li>
+                              <li class="cart-item">
+                                <p class="cart-item-title">Стрижка усов</p>
+                                <p class="cart-item-price">1200 ₽</p>
+                                <button class="cart-item-button button" type="button">
+                                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.41989 1L3.7034 0.503861L3.99132 0H4.57164H11.4288H12.0091L12.297 0.503861L12.5805 1H14.5002H15.6288L15.4929 2.12042L13.916 15.1204L13.8093 16H12.9233H3.07714H2.19111L2.08442 15.1204L0.507491 2.12042L0.371582 1H1.50021H3.41989ZM3.96317 14L2.62885 3H13.3716L12.0373 14H3.96317ZM9.00276 4.92875L8.50276 11.9288L10.4977 12.0712L10.9977 5.07125L9.00276 4.92875ZM5.50276 12.0712L5.00276 5.07125L6.99767 4.92875L7.49767 11.9288L5.50276 12.0712Z" fill="white"/>
+                                  </svg>
+                                  <span class="visually-hidden">Удалить из корзины</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- Поповер — выпадающий блок, который появляется при нажатии на другой элемент. -->
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link nav-link-login" href="#">
+                          <svg class="nav-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2H14V14H9V16H15H16V15V1V0H15H9V2ZM4.29289 3.70711L7.53553 6.94975H0V8.94975H7.53553L4.29289 12.1924L5.70711 13.6066L10.6569 8.65685L11.364 7.94975L10.6569 7.24264L5.70711 2.29289L4.29289 3.70711Z" fill="#BDBDBD"/>
+                          </svg>
+                          Вход
+                        </a>
+                      </li>
                     </ul>
             </nav>
             
@@ -316,54 +364,56 @@
             </section>
         </div>
     </main>
-        <footer class="page-footer">
-            <div class="page-footer-container">
-            <section class="footer-contacts">
-                <h2 class="visually-hidden">Контакты</h2>
-                <img class="footer-logo" src="/img/logo-short-dark.svg" alt="логотип Барбершопа" width="183" height="21">
-                <address class="footer-address">
-                    <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-                    <a class="footer-phone" href="tel:88005558628">8 800 555-86-28</a>
-                </address>
-                <a class="footer-contacts-map-link" href="#">Как нас найти?</a>
-            </section>
 
-            <section class="newsletter">
-                <h2 class="page-footer-title">Получайте лучшие предложения</h2>
-                <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-                    <p class="newsletter-email">
-                        <label class="visually-hidden" for="newsletter-email">Email</label>
-                        <input class="field" type="email" name="newsletter-email" id="newsletter-email" placeholder="email@htmlacademy.ru" required>
-                    </p>
-                    <button class="button newsletter-button" type="submit">
-                        <span class="visually-hidden">Отправить</span>
-                    </button>
-                </form>
-            </section>
-
-            <section class="footer-social">
-                <h2 class="page-footer-title">Давайте дружить</h2>
-                <ul class="footer-social-list">
-                    <li class="footer-social-item">
-                        <a class="button" href="#">
-                            <span class="visually-hidden">Твиттер</span>
-                        </a>
-                    </li>
-                    <li class="footer-social-item">
-                        <a class="button" href="#">
-                            <span class="visually-hidden">Вконтакте</span>
-                        </a>
-                    </li>
-                    <li class="footer-social-item">
-                        <a class="button" href="#">
-                            <span class="visually-hidden">Инстаграм</span>
-                        </a>
-                    </li>
-                </ul>
-                <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p> 
-            </section>
-        </div>
-        </footer>
+    <!-- Подвал -->
+    <footer class="page-footer">
+      <div class="page-footer-container">
+        <section class="footer-contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <img class="footer-logo" src="img/logo-short-dark.svg" alt="логотип Барбершопа Бородинский" width="183" height="21">
+          <address class="footer-address">
+            <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+            <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </address>
+          <a class="footer-contacts-map-link" href="#">Как нас найти?</a>
+        </section>
+        <section class="newsletter">
+          <h2 class="page-footer-title">Получайте лучшие предложения</h2>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="newsletter-email">
+              <label class="visually-hidden" for="newsletter-email">Email</label>
+              <input class="field" type="email" name="newsletter-email" id="newsletter-email" placeholder="email@htmlacademy.ru" required>
+            </p>
+            <button class="button newsletter-button" type="submit">
+              <span class="visually-hidden">Отправить</span>
+            </button>
+          </form>
+        </section>
+        
+        <section class="footer-social">
+          <h2 class="page-footer-title">Давайте дружить</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="footer-social-link footer-social-tw" href="#">
+                <span class="visually-hidden">Твиттер</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link footer-social-vk" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-social-link footer-social-instagram" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+          </ul>
+          <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+          </p> 
+        </section>
+      </div>
+    </footer>
 
     </body>
 
