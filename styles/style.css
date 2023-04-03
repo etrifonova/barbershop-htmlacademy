@@ -281,11 +281,19 @@ body {
 
 
 .main-index {
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: #000000;
     background-image: url('/img/index-bg.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
+}
+
+/* СТИЛИ НИЖЕ КАК БУДТО НЕ ОТРАЖАЮТСЯ */
+.main-inner {
+  padding-top: 40px;
+  color: #242424;
+  background-color: #fbf7f4;
+  background-image: url("/img/bg-noisy.png");
 }
 
 .page-container {
@@ -297,70 +305,133 @@ body {
     display: block;
     margin: 0 auto;
     margin-bottom: 64px;
-
 }
 
 /* ПРЕИМУЩЕСТВА */
+.advantages {
+  margin-bottom: 58px;
+}
+
 .advantages-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    margin-bottom: 58px;
-    list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .advantages-item {
-    width: 277px;
+  width: 277px;
 }
 
 .advantages-title {
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 32px;
-    line-height: 35px;
-    text-transform: uppercase;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 56px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+/* добавляем ромбик перед преимущствами */
+.advantages-title::before {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  background-color: #ffffff;
+  content: "";
+  transform: rotate(45deg);
 }
 
 .advantages-description {
-    margin: 0;
+  margin: 0;
 }
 
 /* Index columns */
-
 .index-columns {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 40px;
-    color: #242424;
-    background-color: #FBF7F4;
-    background-image: url("img/bg-noisy.png");
-    margin-bottom: 32px;
-    padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 40px;
+  color: #242424;
+  background-color: #fbf7f4;
+  background-image: url("/img/bg-noisy.png");
+  position: relative;
+}
+
+.index-columns::after {
+  content:'';
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  width: 0;
+  border-right: 1px dashed #595959;
+}
+
+.index-columns:first-of-type::after {
+  left: 470px;
+}
+
+.index-columns:last-of-type::after {
+  left: 430px;
 }
 
 .index-columns:last-child {
   margin-bottom: 0;
 }
 
+/* Услуги */
 .services {
     width: 390px;
     text-transform: uppercase;
 }
 
 .services-title {
-    font-size: 32px;
-    line-height: 35px;
-    font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
 }
 
 .services-list {
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 700;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  list-style-type: none;
 }
+
+.services-item {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+/* Точечная линия между названиями и ценами */
+.services-item::before {
+  flex-grow: 1;
+  order: 2;
+  margin-right: 16px;
+  margin-left: 16px;
+  border-bottom: 2px dotted rgba(89, 89, 89, 0.5);
+  content: "";
+}
+
 .services-prices {
-    color: #AF7842;
+  order: 3;
+  color: #af7842;
 }
 
 .gallery {
@@ -370,12 +441,13 @@ body {
 /* Title */
 
 .gallery-title {
-    margin-top: 0;
-    margin-bottom: 28px;   
-    font-size: 32px;
-    line-height: 35px;
-    font-weight: 700;
-    text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .slider-image {
@@ -398,11 +470,11 @@ body {
 .slider-button {
   width: 48px;
   height: 60px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
   border: none;
   cursor: pointer;
-  background-image: url("img/arrow-right.svg");
+  background-image: url("/img/arrow-right.svg");
   /* стрелки не видно на странице */
   background-position: center;
   background-repeat: no-repeat;
@@ -410,12 +482,12 @@ body {
 }
 
 .slider-button:hover {
-  background-color: #814B18;
+  background-color: #814b18;
 }
 
 .slider-button:focus {
-  outline: 2px solid #DBB590;
-  background-color: #4E2E0E;
+  outline: 2px solid #dbb590;
+  background-color: #4e2e0e;
 }
 
 .slider-prev {
@@ -440,18 +512,18 @@ body {
   height: 8px;
   margin: 0;
   padding: 0;
-  background-color: #DBDBDB;
+  background-color: #dbdbdb;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 } 
 
 .slider-pagination-button:hover {
-  background-color: #AF7842;
+  background-color: #af7842;
 }
 
 .slider-pagination-button:focus {
-  background-color: #DBB590;
+  background-color: #dbb590;
   outline: none;
 }
 
@@ -465,20 +537,30 @@ body {
 }
 
 .contacts-title {
-    line-height: 35px;
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contacts-address {
+  font-style: normal;
 }
 
 .contacts-address-text {
-    font-style: normal;
+  margin: 8px 0;
 }
+
 .contacts-subtitle {
-    font-size: 20px;
-    line-height: 28px;
-    text-transform: uppercase;
-    color: #AF7842;
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #af7842;
 }
 
 .contacts-phone {
@@ -489,52 +571,67 @@ body {
     color: #242424;
 }
 
+.contacts-phone {
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #242424;
+}
 
+.contacts-schedule {
+  margin: 8px 0;
+  padding: 0;
+  list-style-type: none;
+}
 
+.contacts-navigation {
+  margin-top: 21px;
+  margin-bottom: 0;
+}
+
+/* Запись */
 .appointment {
     width: 430px;
   }
 
+.appointment-title {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 32px;
+  line-height: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .appointment-form {
     display: grid;
     grid-template-columns: 114px 74px 208px;
-    gap: 20px;
+    gap: 15px;
 }
 
-.field-group {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+.appointment .field-group,
+.newsletter .field-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
-
-.appointment-form  .info {
-    display: none;
-  }
-  
 
 .appointment-form-name {
-    grid-column: 1 / -1;
-    /* Чтобы растянуть эту область на весь ряд, используем свойство grid-column со значением 1 / -1. При такой записи началом области будет первая линия, а концом — последняя линия, при любом количестве грид-линий. */
+  grid-column: 1 / -1;
+  /* Чтобы растянуть эту область на весь ряд, используем свойство grid-column со значением 1 / -1. При такой записи началом области будет первая линия, а концом — последняя линия, при любом количестве грид-линий. */
 }
 
 .appointment-submit {
-    grid-column: 1 / -1;
-    justify-self: start;
-    margin-top: 9px;
-}
-
-.appointment-title {
-    margin-top: 0;
-    margin-bottom: 28px; 
-    font-size: 32px;
-    line-height: 35px;
-    font-weight: 700;
-    text-transform: uppercase;
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 9px;
 }
 
 .appointment-info {
-    color: #595959;
-  }
+  color: #595959;
+}
 
 .form-label {
     margin-bottom: 8px;
@@ -557,7 +654,7 @@ body {
   padding: 0;
   background-color: transparent;
   border: none;
-  background-image: url("img/info.svg");
+  background-image: url("/img/info.svg");
   /* очередной свг не отображается на странице */
   background-repeat: no-repeat;
   background-position: center;
@@ -569,25 +666,25 @@ body {
   padding: 8px 14px;
   font: inherit;
   font-weight: 700;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 2px solid #242424;
 }
 
 /* Hover, Focus */
 .field:hover,
 .field:focus {
-  border-color: #AF7842;
+  border-color: #af7842;
 }
 
 .field:focus {
-  outline: 2px solid #DBB590;
+  outline: 2px solid #dbb590;
 }
 
 /* Disabled */
 .field:disabled,
 .field:disabled:hover {
   color: #595959;
-  background-color: #DBB590;
+  background-color: #dbb590;
   border-color: #595959;
 }
 
@@ -597,64 +694,72 @@ body {
 }
 
 .field:focus:invalid {
-  border-color: #EA5454;
+  border-color: #ea5454;
 }
 
-/* Placeholder */
 .field::placeholder {
-  color: #DBDBDB;
+  color: #dbdbdb;
   opacity: 1;
 }
 
+
 /* Footer */
-
 .page-footer {
-    font-size: 14px;
-    font-weight: 700;
-    color: #FFFFFF;
-    background-color: #242424;
-    background-image: url("img/bg-noisy.png"); 
-    background-repeat: repeat;
-}
-
-.page-footer a {
-    color: #FFFFFF;
-}
-
-
-.page-footer .htmlacademy-link {
-    font-size: 14px;
-    color: #DBB590;
-}
-
-
-.page-footer-title {
-    margin-top: 0;
-    margin-bottom: 14px;
-    font-family: "PT Sans Narrow", sans-serif;
-    font-size: 20px;
-    line-height: 28px;
-    font-weight: 700;
-    color: #FFFFFF;
-    text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #242424;
+  background-image: url("/img/bg-noisy.png"); 
+  background-repeat: repeat;
 }
 
 .page-footer-container {
-    display: flex;
-    width: 940px;
-    margin: 0 auto;
-    padding: 40px 0; 
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+  padding: 40px 0; 
+}
+
+.footer-contacts-logo {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.page-footer a {
+    color: #ffffff;
+}
+
+.page-footer .htmlacademy-link {
+  font-size: 14px;
+  color: #dbb590;
+}
+
+.page-footer-title {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.footer-contacts {
+  width: 200px;
+  margin-right: 130px;
 }
 
 .footer-address {
-    font-style: normal;
+  margin-bottom: 16px;
+  font-style: normal;
 }
 
 .footer-address p {
     font-size: 14px;
     line-height: 20px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 
@@ -667,19 +772,18 @@ body {
     text-transform: uppercase;
 }
 
-.footer-contacts {
-    width: 200px;
-    margin-right: 130px;
-}
-
 .footer-contacts-map-link {
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: underline;
     text-transform: uppercase;
+}
+
+.newsletter-form {
+  display: flex;
 }
 
 .newsletter-email {
@@ -687,18 +791,10 @@ body {
   margin: 0;
 }
 
-.newsletter-email .field {
-  width: 192px;
-}
-
-.newsletter-form {
-  display: flex;
-}
-
 .newsletter-button {
   width: 56px;
   height: 44px;
-  background-image: url("images/arrow-tail-right.svg");
+  background-image: url("/img/arrow-tail-right.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 16px;
@@ -710,19 +806,20 @@ body {
 }
 
 .footer-social-list {
-    display: flex;
-    flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap; 
   margin: 0;
+  margin-bottom: 28px;
   padding: 0;
   list-style-type: none;
 }
 
 .footer-social-item {
-    width: 56px;
-    height: 44px;
-    /* Теперь дадим минимальные размеры для контейнеров иконок, чтобы у них было большая область клика и при меньшем размеры иконок контейнер оставался в этих минимальных размерах. */
-    margin-right: 8px; 
-    margin-bottom: 8px;
+  width: 56px;
+  height: 44px;
+  /* Теперь дадим минимальные размеры для контейнеров иконок, чтобы у них было большая область клика и при меньшем размеры иконок контейнер оставался в этих минимальных размерах. */
+  margin-right: 8px; 
+  margin-bottom: 8px;
 }
 
 .footer-social-item:nth-child(3n) {
@@ -730,25 +827,35 @@ body {
   /* Для каждой третьей социальной сети убираем отступ справа. Добавим боковые отступы, чтобы социальные сети не прилипали друг к другу. Видим, что элементы перестали помещаться. Сейчас поправим. */
 }
 
+/* Social */
 
-/* КАТАЛОГ */
-
-.main-container {
-    flex-grow: 1;
-    padding-top: 64px;
-    padding-bottom: 60px;
-
+.footer-social-link {
+  display: block;
+  height: 44px;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
 }
 
-.main-inner {
-    padding-top: 40px;
-    color: #242424;
-    background-color: #FBF7F4;
-    background-image: url("img/bg-noisy.png");
+.footer-social-tw {
+  background-image: url("/img/twitter.svg");
+}
+
+.footer-social-vk {
+  background-image: url("/img/vk.svg");
+}
+
+.footer-social-instagram {
+  background-image: url("/img/instagram.svg");
+}
+
+.footer-social p {
+  margin: 0;
 }
 
 
-
+/* Модальное окно */
 .modal-container {
   position: fixed;
   top: 0;
@@ -767,7 +874,7 @@ body {
   position: relative;
   margin: auto;
   padding: 40px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .modal-auth {
@@ -783,7 +890,7 @@ body {
   height: 44px;
   background-color: #ffffff;
   border: none;
-  background-image: url("close-button.png");
+  background-image: url("/img/close.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -836,11 +943,14 @@ body {
 .auth-form-register {
   width: 360px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
+/* НАЧАТЬ ЗДЕСЬ 03.04.23 */
 
-
+.inner-header {
+  margin-bottom: 32px;
+}
 
 .inner-header-title {
     margin-top: 0;
