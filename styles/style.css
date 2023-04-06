@@ -42,7 +42,7 @@
 html {
     height: 100%;
   }
-  
+
 
 body {
   min-width: 1020px;
@@ -275,7 +275,7 @@ body {
 
 .main-container {
     flex-grow: 1;
-    padding-top: 64px; 
+    padding-top: 64px;
     padding-bottom: 60px;
 }
 
@@ -515,7 +515,7 @@ body {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-} 
+}
 
 .slider-pagination-button:hover {
   background-color: #af7842;
@@ -707,7 +707,7 @@ body {
   font-weight: 700;
   color: #ffffff;
   background-color: #242424;
-  background-image: url("/img/bg-noisy.png"); 
+  background-image: url("/img/bg-noisy.png");
   background-repeat: repeat;
 }
 
@@ -715,7 +715,7 @@ body {
   display: flex;
   width: 940px;
   margin: 0 auto;
-  padding: 40px 0; 
+  padding: 40px 0;
 }
 
 .footer-contacts-logo {
@@ -805,7 +805,7 @@ body {
 
 .footer-social-list {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 28px;
   padding: 0;
@@ -816,7 +816,7 @@ body {
   width: 56px;
   height: 44px;
   /* Теперь дадим минимальные размеры для контейнеров иконок, чтобы у них было большая область клика и при меньшем размеры иконок контейнер оставался в этих минимальных размерах. */
-  margin-right: 8px; 
+  margin-right: 8px;
   margin-bottom: 8px;
 }
 
@@ -864,9 +864,9 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
@@ -952,7 +952,7 @@ body {
 
 .inner-header-title {
   margin-top: 0;
-  margin-bottom: 16px; 
+  margin-bottom: 16px;
   font-size: 32px;
   line-height: 35px;
   text-transform: uppercase;
@@ -964,7 +964,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 0; 
+  padding: 0;
   color: #242424;
   list-style-type: none;
 }
@@ -1067,7 +1067,7 @@ body {
 .range-toggle:active,
 .range-toggle:focus {
   outline: 3px solid #dbb590;
-} 
+}
 /* An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out". */
 
 .toggle-min {
@@ -1448,7 +1448,7 @@ body {
   /* Зададим блоку position:absolute, чтобы вытащить блок из потока на отдельный слой. Для простоты вычисления размеров блока зададим box-sizing: border-box для смены модели расчёта размеров. */
   /* Если у блока задан position: absolute, то браузер рассчитывает размещение этого блока относительно любого другого блока, у которого есть position отличный от static. Если ни в одном из родительских блоков такого свойства нет, то положение блока рассчитывается относительно <body>.
   Для выставления блока относительно кнопки с корзиной добавим блоку navigation-item свойство position: relative. */
-  
+
 .popover {
   position: absolute;
   top: 0;
@@ -1462,7 +1462,7 @@ body {
   background-color: #ffffff;
   min-height: 186px;
   box-shadow: 0 18px 40px rgba(79, 70, 60, 0.16);
-  /* display: none; */
+  display: none;
   /* Скроем поповер. Теперь мы можем добавлять или удалять класс для отображения и скрытия блока с корзиной. */
 }
 
