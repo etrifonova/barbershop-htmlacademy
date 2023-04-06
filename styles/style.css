@@ -864,9 +864,9 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal-container-close {
+/* .modal-container-close {
   display: none;
-}
+} */
 
 .modal {
   position: relative;
