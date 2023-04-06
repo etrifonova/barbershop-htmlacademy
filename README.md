@@ -1,4 +1,4 @@
-# barbershop-htmlacademy
+# [barbershop-htmlacademy](https://etrifonova.github.io/barbershop-htmlacademy/)
 
 * Только разметка и стилизация. JavaScript на этом этапе не использовался.
 * Верстка валидная - проверено через W3C Markup Validation Service
